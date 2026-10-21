@@ -13,7 +13,8 @@ and game lists built around big game logos, descriptions and trailers.
   - **Covers** (default) – flat, uncropped box art;
   - **3D boxes** – 3D box art;
   - **Physical media** – discs, cartridges and UMDs;
-  - **Logos + cover** – a column of game logos, the cover next to it.
+  - **Logos + cover** – a column of game logos, the cover next to it;
+  - **Logos + 3D box + media** – a column of game logos, the 3D box and the disc / cartridge next to it.
 - **No looping game lists**: lists have a start and an end. Use **LB / RB** to switch systems.
 - **"System › Game" header**, game logo, genre, players / play time / play count, rating, description panel,
   and the trailer (or a screenshot) bottom right.
@@ -64,4 +65,4 @@ The Mulish font is under the SIL Open Font License 1.1.
 Thème ES-DE épuré, façon console : une colonne de logos de consoles sur une illustration plein écran,
 et des listes de jeux centrées sur le logo du jeu, sa description et sa bande-annonce.
 Les intitulés des options sont traduits en français. Variantes : jaquettes (par défaut), boîtes 3D,
-supports (CD, cartouches), logos + jaquette. Les listes de jeux ne bouclent pas : LB / RB pour changer de console.
+supports (CD, cartouches), logos + jaquette, logos + boîte 3D + support. Les listes de jeux ne bouclent pas : LB / RB pour changer de console.
