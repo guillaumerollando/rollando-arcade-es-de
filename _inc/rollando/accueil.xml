@@ -46,14 +46,15 @@ Paths are relative to this file.
          <pos>0.045 0.090</pos>
          <size>0.270 0.800</size>
          <itemSize>0.170 0.075</itemSize>
-         <itemScale>1.35</itemScale>
+         <itemScale>1.45</itemScale>
          <maxItemCount>7</maxItemCount>
          <itemHorizontalAlignment>left</itemHorizontalAlignment>
          <staticImage>./../logos/${system.theme}.png</staticImage>
          <imageFit>contain</imageFit>
          <imageInterpolation>linear</imageInterpolation>
          <unfocusedItemOpacity>1</unfocusedItemOpacity>
-         <unfocusedItemDimming>0.55</unfocusedItemDimming>
+         <unfocusedItemDimming>0.45</unfocusedItemDimming>
+         <unfocusedItemSaturation>0.5</unfocusedItemSaturation>
          <text>${system.fullName}</text>
          <textColor>FFFFFF</textColor>
          <textBackgroundColor>00000000</textBackgroundColor>
