@@ -3,7 +3,18 @@
 A clean, console-like theme for [ES-DE](https://es-de.org): a column of system logos over full-screen artwork,
 and game lists built around big game logos, descriptions and trailers.
 
-*Screenshots coming soon.*
+![System view](screenshots/01-system.jpg)
+*System view*
+
+| Covers (default) | 3D boxes |
+|---|---|
+| ![Covers](screenshots/02-covers.jpg) | ![3D boxes](screenshots/03-3dboxes.jpg) |
+| **Physical media** | **Logos + 3D box + media** |
+| ![Physical media](screenshots/04-media.jpg) | ![Logos + 3D box + media](screenshots/05-logos-3dbox-media.jpg) |
+| **Logos + cover** | |
+| ![Logos + cover](screenshots/06-logos-cover.jpg) | |
+
+*All screenshots: 16:9, 1920x1080, "Video · normal background" color scheme, medium font size.*
 
 ## Features
 
