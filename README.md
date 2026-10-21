@@ -3,8 +3,7 @@
 A clean, console-like theme for [ES-DE](https://es-de.org): a column of system logos over full-screen artwork,
 and game lists built around big game logos, descriptions and trailers.
 
-![System view](screenshots/system.jpg)
-![Covers](screenshots/covers.jpg)
+*Screenshots coming soon.*
 
 ## Features
 
