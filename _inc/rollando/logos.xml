@@ -19,11 +19,11 @@ Paths are relative to this file.
 
          <grid name="gamelist-grid">
             <origin>0 0</origin>
-            <pos>0.030 0.110</pos>
+            <pos>0.020 0.110</pos>
             <size>0.160 0.800</size>
-            <itemSize>0.120 0.090</itemSize>
-            <itemScale>1.25</itemScale>
-            <itemSpacing>0 0.030</itemSpacing>
+            <itemSize>0.110 0.082</itemSize>
+            <itemScale>1.45</itemScale>
+            <itemSpacing>0 0.034</itemSpacing>
             <fractionalRows>true</fractionalRows>
             <imageType>marquee</imageType>
             <imageFit>contain</imageFit>
@@ -31,7 +31,8 @@ Paths are relative to this file.
             <backgroundColor>00000000</backgroundColor>
             <selectorColor>00000000</selectorColor>
             <unfocusedItemOpacity>1</unfocusedItemOpacity>
-            <unfocusedItemDimming>0.55</unfocusedItemDimming>
+            <unfocusedItemDimming>0.45</unfocusedItemDimming>
+            <unfocusedItemSaturation>0.5</unfocusedItemSaturation>
             <fontPath>${rlFontMedium}</fontPath>
             <fontSize>0.024</fontSize>
             <textColor>FFFFFF</textColor>

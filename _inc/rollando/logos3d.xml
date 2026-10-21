@@ -19,11 +19,11 @@ Paths are relative to this file.
 
          <grid name="gamelist-grid">
             <origin>0 0</origin>
-            <pos>0.030 0.110</pos>
+            <pos>0.020 0.110</pos>
             <size>0.160 0.800</size>
-            <itemSize>0.120 0.090</itemSize>
-            <itemScale>1.25</itemScale>
-            <itemSpacing>0 0.030</itemSpacing>
+            <itemSize>0.110 0.082</itemSize>
+            <itemScale>1.45</itemScale>
+            <itemSpacing>0 0.034</itemSpacing>
             <fractionalRows>true</fractionalRows>
             <imageType>marquee</imageType>
             <imageFit>contain</imageFit>
@@ -31,7 +31,8 @@ Paths are relative to this file.
             <backgroundColor>00000000</backgroundColor>
             <selectorColor>00000000</selectorColor>
             <unfocusedItemOpacity>1</unfocusedItemOpacity>
-            <unfocusedItemDimming>0.55</unfocusedItemDimming>
+            <unfocusedItemDimming>0.45</unfocusedItemDimming>
+            <unfocusedItemSaturation>0.5</unfocusedItemSaturation>
             <fontPath>${rlFontMedium}</fontPath>
             <fontSize>0.024</fontSize>
             <textColor>FFFFFF</textColor>
@@ -60,22 +61,23 @@ Paths are relative to this file.
          <image name="game-marquee">
             <visible>false</visible>
          </image>
-         <!-- 3D box, with the disc / cartridge next to it -->
+         <!-- 3D box on a baseline, with a smaller disc / cartridge in front of its bottom-right corner
+              (Art Book Next style); no physical media: the box alone -->
          <image name="rl-boite">
-            <origin>0 0</origin>
-            <pos>0.185 0.110</pos>
-            <maxSize>0.140 0.255</maxSize>
+            <origin>0 1</origin>
+            <pos>0.205 0.360</pos>
+            <maxSize>0.150 0.250</maxSize>
             <imageType>${rlTypeBoite}</imageType>
             <interpolation>linear</interpolation>
             <zIndex>42</zIndex>
          </image>
          <image name="rl-support">
-            <origin>0 0.5</origin>
-            <pos>0.335 0.2375</pos>
-            <maxSize>0.150 0.200</maxSize>
+            <origin>0.5 1</origin>
+            <pos>0.300 0.372</pos>
+            <maxSize>0.075 0.130</maxSize>
             <imageType>physicalmedia</imageType>
             <interpolation>linear</interpolation>
-            <zIndex>41</zIndex>
+            <zIndex>43</zIndex>
          </image>
          <text name="gamelist-genre-name">
             <origin>0 0</origin>
