@@ -316,6 +316,7 @@
 	<aspectRatio name="16:9">
       <include>./aspect-ratio-16-9.xml</include>
       <include>./_inc/rollando/logos.xml</include>
+      <include>./_inc/rollando/logos3d.xml</include>
       <include>./_inc/rollando/boites.xml</include>
       <include>./_inc/rollando/jaquettes.xml</include>
       <include>./_inc/rollando/supports.xml</include>
@@ -331,6 +332,7 @@
       </variables>
       <include>./aspect-ratio-16-10.xml</include>
       <include>./_inc/rollando/logos.xml</include>
+      <include>./_inc/rollando/logos3d.xml</include>
       <include>./_inc/rollando/boites.xml</include>
       <include>./_inc/rollando/jaquettes.xml</include>
       <include>./_inc/rollando/supports.xml</include>

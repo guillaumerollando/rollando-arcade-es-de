@@ -1,0 +1,148 @@
+<!--
+Rollando Arcade: "logos + 3D box + media" gamelist variant = layout of "logos + cover", except that the cover
+is replaced by the game's 3D box (flat cover as fallback, and always for Steam) with its disc / cartridge / UMD
+next to it (nothing when the game has no physical media, e.g. Steam).
+No looping list, so LB / RB switch systems. Included after aspect-ratio-16-*.xml.
+Paths are relative to this file.
+-->
+<theme>
+   <variables>
+      <rlFontMedium>./../fonts/Mulish-Medium.ttf</rlFontMedium>
+   </variables>
+
+   <variant name="logos3d">
+      <view name="gamelist">
+         <!-- Background darkening (PS5 gradient), set by the colour scheme: light / normal / dark -->
+         <image name="background-gradient">
+            <opacity>${rlFondOpacite}</opacity>
+         </image>
+
+         <grid name="gamelist-grid">
+            <origin>0 0</origin>
+            <pos>0.030 0.110</pos>
+            <size>0.160 0.800</size>
+            <itemSize>0.120 0.090</itemSize>
+            <itemScale>1.25</itemScale>
+            <itemSpacing>0 0.030</itemSpacing>
+            <fractionalRows>true</fractionalRows>
+            <imageType>marquee</imageType>
+            <imageFit>contain</imageFit>
+            <imageInterpolation>linear</imageInterpolation>
+            <backgroundColor>00000000</backgroundColor>
+            <selectorColor>00000000</selectorColor>
+            <unfocusedItemOpacity>1</unfocusedItemOpacity>
+            <unfocusedItemDimming>0.55</unfocusedItemDimming>
+            <fontPath>${rlFontMedium}</fontPath>
+            <fontSize>0.024</fontSize>
+            <textColor>FFFFFF</textColor>
+            <textBackgroundColor>00000000</textBackgroundColor>
+            <zIndex>40</zIndex>
+         </grid>
+
+         <!-- Top left: system logo (the "System › Game" header is set in commun.xml) -->
+         <text name="system-tab,games-tab">
+            <visible>false</visible>
+         </text>
+         <image name="gamesystem-logo">
+            <origin>0 0.5</origin>
+            <pos>0.045 0.050</pos>
+            <maxSize>0.042 0.042</maxSize>
+         </image>
+         <text name="gamelist-system-name">
+            <origin>0 0.5</origin>
+            <pos>0.092 0.050</pos>
+            <size>0.500 0.050</size>
+            <fontSize>${clockFontSize}</fontSize>
+            <color>${white}</color>
+         </text>
+
+         <!-- Right of the column: 3D box + physical media, genre, info pills -->
+         <image name="game-marquee">
+            <visible>false</visible>
+         </image>
+         <!-- 3D box, with the disc / cartridge next to it -->
+         <image name="rl-boite">
+            <origin>0 0</origin>
+            <pos>0.185 0.110</pos>
+            <maxSize>0.140 0.255</maxSize>
+            <imageType>${rlTypeBoite}</imageType>
+            <interpolation>linear</interpolation>
+            <zIndex>42</zIndex>
+         </image>
+         <image name="rl-support">
+            <origin>0 0.5</origin>
+            <pos>0.335 0.2375</pos>
+            <maxSize>0.150 0.200</maxSize>
+            <imageType>physicalmedia</imageType>
+            <interpolation>linear</interpolation>
+            <zIndex>41</zIndex>
+         </image>
+         <text name="gamelist-genre-name">
+            <origin>0 0</origin>
+            <pos>0.185 0.385</pos>
+            <size>0.400 0.0500</size>
+            <horizontalAlignment>left</horizontalAlignment>
+            <fontSize>${metadataFontSize}</fontSize>
+         </text>
+         <image name="metadata-background">
+            <pos>0.1850 0.500</pos>
+         </image>
+         <image name="gamelist-metadata-players-icon">
+            <pos>0.1960 0.500</pos>
+         </image>
+         <text name="gamelist-metadata-players">
+            <pos>0.2190 0.500</pos>
+         </text>
+         <image name="gamelist-metadata-left-divider">
+            <pos>0.2620 0.500</pos>
+         </image>
+         <image name="gamelist-metadata-playtime-icon">
+            <pos>0.2700 0.500</pos>
+         </image>
+         <text name="gamelist-metadata-playtime">
+            <pos>0.2960 0.500</pos>
+         </text>
+         <image name="gamelist-metadata-middle-divider">
+            <pos>0.3950 0.500</pos>
+         </image>
+         <image name="gamelist-metadata-playcount-icon">
+            <pos>0.4050 0.500</pos>
+         </image>
+         <text name="gamelist-metadata-playcount">
+            <pos>0.4265 0.500</pos>
+         </text>
+         <badges name="gamelist-badges">
+            <pos>0.4790 0.468</pos>
+         </badges>
+
+         <!-- Game title: moved to the header by commun.xml -->
+         <text name="system-games-name">
+            <pos>0.185 0.870</pos>
+            <size>0.450 0.045</size>
+            <fontSize>${metadataFontSize}</fontSize>
+         </text>
+
+         <!-- Game rating as stars, below the info pills -->
+         <rating name="rl-note">
+            <origin>0 0</origin>
+            <pos>0.188 0.555</pos>
+            <size>0 0.032</size>
+            <filledPath>./etoile-pleine.svg</filledPath>
+            <unfilledPath>./etoile-vide.svg</unfilledPath>
+            <color>FFFFFF</color>
+            <zIndex>45</zIndex>
+         </rating>
+
+         <!-- Video / screenshot: bottom right -->
+         <video name="media-video">
+            <pos>0.830 0.700</pos>
+            <maxSize>0.300 0.440</maxSize>
+            <visible>${showMediaVideoGamelist}</visible>
+            <zIndex>${MediaVideoAudioOnly}</zIndex>
+         </video>
+         <image name="media-screenshot,media-miximage">
+            <pos>0.830 0.730</pos>
+         </image>
+      </view>
+   </variant>
+</theme>

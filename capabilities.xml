@@ -53,6 +53,11 @@
       <label language="fr_FR">Jeux : logos + jaquette</label>
       <selectable>true</selectable>
    </variant>
+   <variant name="logos3d">
+      <label>Games: logos + 3D box + media</label>
+      <label language="fr_FR">Jeux : logos + boîte 3D + support</label>
+      <selectable>true</selectable>
+   </variant>
 
     <colorScheme name="video-normal">
         <label>Video · normal background</label>

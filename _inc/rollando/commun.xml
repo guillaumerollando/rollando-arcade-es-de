@@ -20,7 +20,7 @@ Paths are relative to this file.
    </view>
 
 
-   <variant name="jaquettes,boites,supports,logos">
+   <variant name="jaquettes,boites,supports,logos,logos3d">
       <view name="gamelist">
          <!-- Header: logo + "System › Game" -->
          <text name="gamelist-system-name">
