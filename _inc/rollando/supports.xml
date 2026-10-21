@@ -1,0 +1,128 @@
+<!--
+Rollando Arcade: "physical media" gamelist variant = same layout as "covers", with each game's disc,
+cartridge or UMD in the column (flat cover as fallback, and always for Steam: see rlTypeSupport
+in _inc/system/metadata/). No looping list, so LB / RB switch systems.
+Paths are relative to this file.
+-->
+<theme>
+   <variant name="supports">
+      <view name="gamelist">
+         <!-- Background darkening (PS5 gradient), set by the colour scheme: light / normal / dark -->
+         <image name="background-gradient">
+            <opacity>${rlFondOpacite}</opacity>
+         </image>
+
+         <grid name="gamelist-grid">
+            <origin>0 0</origin>
+            <pos>0.045 0.110</pos>
+            <size>0.160 0.800</size>
+            <itemSize>0.090 0.165</itemSize>
+            <itemScale>1.40</itemScale>
+            <itemSpacing>0 0.025</itemSpacing>
+            <fractionalRows>true</fractionalRows>
+            <imageType>${rlTypeSupport}</imageType>
+            <imageFit>contain</imageFit>
+            <imageInterpolation>linear</imageInterpolation>
+            <defaultImage>./../system/icons/_default_game.webp</defaultImage>
+            <backgroundColor>00000000</backgroundColor>
+            <selectorColor>00000000</selectorColor>
+            <unfocusedItemOpacity>1</unfocusedItemOpacity>
+            <unfocusedItemDimming>0.50</unfocusedItemDimming>
+            <unfocusedItemSaturation>0.6</unfocusedItemSaturation>
+            <textColor>00000000</textColor>
+            <textBackgroundColor>00000000</textBackgroundColor>
+            <zIndex>40</zIndex>
+         </grid>
+
+         <!-- Top left: system logo (the "System › Game" header is set in commun.xml) -->
+         <text name="system-tab,games-tab">
+            <visible>false</visible>
+         </text>
+         <image name="gamesystem-logo">
+            <origin>0 0.5</origin>
+            <pos>0.045 0.050</pos>
+            <maxSize>0.042 0.042</maxSize>
+         </image>
+         <text name="gamelist-system-name">
+            <origin>0 0.5</origin>
+            <pos>0.092 0.050</pos>
+            <size>0.500 0.050</size>
+            <fontSize>${clockFontSize}</fontSize>
+            <color>${white}</color>
+         </text>
+
+         <!-- Right of the column: game logo, genre, info pills -->
+         <image name="game-marquee">
+            <origin>0 0.5</origin>
+            <pos>0.185 0.255</pos>
+            <maxSize>0.320 0.210</maxSize>
+         </image>
+         <text name="gamelist-genre-name">
+            <origin>0 0</origin>
+            <pos>0.185 0.385</pos>
+            <size>0.400 0.0500</size>
+            <horizontalAlignment>left</horizontalAlignment>
+            <fontSize>${metadataFontSize}</fontSize>
+         </text>
+         <image name="metadata-background">
+            <pos>0.1850 0.500</pos>
+         </image>
+         <image name="gamelist-metadata-players-icon">
+            <pos>0.1960 0.500</pos>
+         </image>
+         <text name="gamelist-metadata-players">
+            <pos>0.2190 0.500</pos>
+         </text>
+         <image name="gamelist-metadata-left-divider">
+            <pos>0.2620 0.500</pos>
+         </image>
+         <image name="gamelist-metadata-playtime-icon">
+            <pos>0.2700 0.500</pos>
+         </image>
+         <text name="gamelist-metadata-playtime">
+            <pos>0.2960 0.500</pos>
+         </text>
+         <image name="gamelist-metadata-middle-divider">
+            <pos>0.3950 0.500</pos>
+         </image>
+         <image name="gamelist-metadata-playcount-icon">
+            <pos>0.4050 0.500</pos>
+         </image>
+         <text name="gamelist-metadata-playcount">
+            <pos>0.4265 0.500</pos>
+         </text>
+         <badges name="gamelist-badges">
+            <pos>0.4790 0.468</pos>
+         </badges>
+
+         <!-- Game title: moved to the header by commun.xml -->
+         <text name="system-games-name">
+            <pos>0.185 0.870</pos>
+            <size>0.450 0.045</size>
+            <fontSize>${metadataFontSize}</fontSize>
+         </text>
+
+         <!-- Game rating as stars, below the info pills -->
+         <rating name="rl-note">
+            <origin>0 0</origin>
+            <pos>0.188 0.555</pos>
+            <size>0 0.032</size>
+            <filledPath>./etoile-pleine.svg</filledPath>
+            <unfilledPath>./etoile-vide.svg</unfilledPath>
+            <color>FFFFFF</color>
+            <zIndex>45</zIndex>
+         </rating>
+
+         <!-- Video / screenshot: bottom right -->
+         <video name="media-video">
+            <pos>0.830 0.700</pos>
+            <maxSize>0.300 0.440</maxSize>
+            <visible>${showMediaVideoGamelist}</visible>
+            <zIndex>${MediaVideoAudioOnly}</zIndex>
+         </video>
+         <image name="media-screenshot,media-miximage">
+            <pos>0.830 0.730</pos>
+         </image>
+      </view>
+   </variant>
+</theme>

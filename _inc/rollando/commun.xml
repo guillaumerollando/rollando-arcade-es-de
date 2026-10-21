@@ -1,0 +1,92 @@
+<!--
+Rollando Arcade: shared settings, read last (after the variants).
+- Status bar next to the clock.
+- Gamelist variants: "System › Game" header (positions measured per system: rlSepX / rlTitreX in
+  _inc/system/metadata/), description panel below the stars, delayed videos.
+Paths are relative to this file.
+-->
+<theme>
+   <variables>
+      <rlFontMedium>./../fonts/Mulish-Medium.ttf</rlFontMedium>
+      <rlFontLight>./../fonts/Mulish-Light.ttf</rlFontLight>
+   </variables>
+
+   <view name="system, gamelist">
+      <!-- Status bar (Bluetooth, Wi-Fi…) right next to the clock (clock left edge ≈ 0.885) -->
+      <systemstatus name="system-status">
+         <origin>1 0.5</origin>
+         <pos>0.874 0.050</pos>
+      </systemstatus>
+   </view>
+
+
+   <variant name="jaquettes,boites,supports,logos">
+      <view name="gamelist">
+         <!-- Header: logo + "System › Game" -->
+         <text name="gamelist-system-name">
+            <visible>false</visible>
+         </text>
+         <text name="rl-console">
+            <origin>0 0.5</origin>
+            <pos>0.092 0.050</pos>
+            <size>0.400 0.050</size>
+            <text>${rlNomConsole}</text>
+            <fontPath>${rlFontMedium}</fontPath>
+            <fontSize>${clockFontSize}</fontSize>
+            <color>${white}</color>
+            <zIndex>40</zIndex>
+         </text>
+         <text name="rl-separateur">
+            <origin>0 0.5</origin>
+            <pos>${rlSepX} 0.050</pos>
+            <size>0.020 0.050</size>
+            <text>›</text>
+            <fontPath>${rlFontLight}</fontPath>
+            <fontSize>${clockFontSize}</fontSize>
+            <color>${greyUnfocused}</color>
+            <zIndex>40</zIndex>
+         </text>
+         <text name="system-games-name">
+            <origin>0 0.5</origin>
+            <pos>${rlTitreX} 0.050</pos>
+            <size>0.450 0.050</size>
+            <fontPath>${rlFontLight}</fontPath>
+            <fontSize>${clockFontSize}</fontSize>
+            <color>${white}</color>
+            <opacity>1</opacity>
+         </text>
+
+         <!-- Videos wait 2.5 s (1 s in PS5 Menu), so scrolling doesn't start every video -->
+         <video name="media-video">
+            <delay>2.5</delay>
+         </video>
+
+         <!-- Description below the stars, in a panel matching the info pills; scrolls when long -->
+         <image name="rl-description-cadre">
+            <origin>0 0</origin>
+            <pos>0.185 0.605</pos>
+            <size>0.340 0.225</size>
+            <path>./../images/space.svg</path>
+            <tile>true</tile>
+            <cornerRadius>0.0188</cornerRadius>
+            <color>${grey}</color>
+            <opacity>0.5</opacity>
+            <zIndex>44</zIndex>
+         </image>
+         <text name="rl-description">
+            <origin>0 0</origin>
+            <pos>0.199 0.625</pos>
+            <size>0.312 0.185</size>
+            <metadata>description</metadata>
+            <container>true</container>
+            <containerStartDelay>6</containerStartDelay>
+            <containerScrollSpeed>0.6</containerScrollSpeed>
+            <fontPath>${rlFontLight}</fontPath>
+            <fontSize>${rlTexteDesc}</fontSize>
+            <lineSpacing>1.45</lineSpacing>
+            <color>FFFFFF</color>
+            <zIndex>45</zIndex>
+         </text>
+      </view>
+   </variant>
+</theme>

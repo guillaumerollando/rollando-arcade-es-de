@@ -1,0 +1,133 @@
+<!--
+Rollando Arcade: system view
+Column of system logos on the left (Iconic logos by Siddy212, cropped), full-screen "classic" Iconic
+artwork behind it, PS5 Menu (InitialDin) info pill. Both CC BY-NC-SA.
+Included in theme.xml AFTER aspect-ratio-16-*.xml so it overrides the PS5 Menu layout.
+Paths are relative to this file.
+-->
+<theme>
+   <variables>
+      <rlFontMedium>./../fonts/Mulish-Medium.ttf</rlFontMedium>
+      <rlFontLight>./../fonts/Mulish-Light.ttf</rlFontLight>
+   </variables>
+
+   <view name="system">
+      <!-- Background: system artwork, slightly darkened on the left behind the column -->
+      <image name="rl-fond-console">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>./../fonds/${system.theme}.webp</path>
+         <default>./../fonds/_default.webp</default>
+         <interpolation>linear</interpolation>
+         <zIndex>30</zIndex>
+      </image>
+      <image name="rl-degrade">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <path>./degrade-gauche.png</path>
+         <interpolation>linear</interpolation>
+         <zIndex>31</zIndex>
+      </image>
+
+      <!-- No PS5 tabs and no duplicate logo: the column is enough -->
+      <text name="system-tab,games-tab,system-games-name">
+         <visible>false</visible>
+      </text>
+      <image name="gamesystem-logo">
+         <visible>false</visible>
+      </image>
+
+      <!-- Column of system logos on the left (Iconic logos, cropped), selection in the middle -->
+      <carousel name="system-carousel">
+         <type>vertical</type>
+         <origin>0 0</origin>
+         <pos>0.045 0.090</pos>
+         <size>0.270 0.800</size>
+         <itemSize>0.170 0.075</itemSize>
+         <itemScale>1.35</itemScale>
+         <maxItemCount>7</maxItemCount>
+         <itemHorizontalAlignment>left</itemHorizontalAlignment>
+         <staticImage>./../logos/${system.theme}.png</staticImage>
+         <imageFit>contain</imageFit>
+         <imageInterpolation>linear</imageInterpolation>
+         <unfocusedItemOpacity>1</unfocusedItemOpacity>
+         <unfocusedItemDimming>0.55</unfocusedItemDimming>
+         <text>${system.fullName}</text>
+         <textColor>FFFFFF</textColor>
+         <textBackgroundColor>00000000</textBackgroundColor>
+         <fontPath>${rlFontMedium}</fontPath>
+         <fontSize>0.030</fontSize>
+         <color>00000000</color>
+         <fastScrolling>true</fastScrolling>
+         <zIndex>45</zIndex>
+      </carousel>
+
+      <!-- Info pill (games / favourites), bottom right so it never overlaps the column -->
+      <image name="metadata-background">
+         <pos>0.665 0.880</pos>
+         <size>0.285 0.0621</size>
+         <cornerRadius>0.0188</cornerRadius>
+         <visible>true</visible>
+      </image>
+      <image name="system-gamecount-icon">
+         <origin>0 0.5</origin>
+         <pos>0.681 0.880</pos>
+         <size>0 0.030</size>
+         <path>./../images/icon-controller.svg</path>
+         <color>${white}</color>
+         <zIndex>60</zIndex>
+      </image>
+      <text name="system-gamecount">
+         <origin>0 0.5</origin>
+         <pos>0.709 0.880</pos>
+         <size>0.130 0.0444</size>
+         <fontPath>${rlFontMedium}</fontPath>
+         <fontSize>${metadataFontSize}</fontSize>
+         <systemdata>gamecountGames</systemdata>
+         <horizontalAlignment>left</horizontalAlignment>
+         <letterCase>capitalize</letterCase>
+         <color>${white}</color>
+         <zIndex>60</zIndex>
+      </text>
+      <image name="system-metadata-divider">
+         <pos>0.842 0.880</pos>
+         <size>0.0016 0.0611</size>
+      </image>
+      <image name="system-favorites-icon">
+         <origin>0 0.5</origin>
+         <pos>0.859 0.880</pos>
+         <size>0 0.0278</size>
+         <path>./../images/icon-favorite.svg</path>
+         <color>${white}</color>
+         <zIndex>60</zIndex>
+      </image>
+      <text name="system-favorites">
+         <origin>0 0.5</origin>
+         <pos>0.889 0.880</pos>
+         <size>0.050 0.0444</size>
+         <fontPath>${rlFontMedium}</fontPath>
+         <fontSize>${metadataFontSize}</fontSize>
+         <systemdata>gamecountFavoritesNoText</systemdata>
+         <horizontalAlignment>left</horizontalAlignment>
+         <color>${white}</color>
+         <zIndex>60</zIndex>
+      </text>
+
+      <!-- No "last played" pill, video or screenshot on the system view -->
+      <image name="metadata-lastplayed-background,system-lastplayed-divider,media-screenshot">
+         <visible>false</visible>
+      </image>
+      <video name="media-video">
+         <visible>false</visible>
+      </video>
+
+      <helpsystem name="help-left">
+         <entries>start</entries>
+      </helpsystem>
+      <helpsystem name="help-right">
+         <entries>a</entries>
+      </helpsystem>
+   </view>
+</theme>

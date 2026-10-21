@@ -1,0 +1,110 @@
+<themeCapabilities>
+	
+    <themeName>Rollando Arcade</themeName>
+
+    <language>fr_FR</language>
+    <language>ar_SA</language>
+    <language>bs_BA</language>
+    <language>ca_ES</language>
+    <language>de_DE</language>
+    <language>en_GB</language>
+    <language>es_ES</language>
+    <language>hr_HR</language>
+    <language>it_IT</language>
+    <language>ja_JP</language>
+    <language>ko_KR</language>
+    <language>nl_NL</language>
+    <language>pl_PL</language>
+    <language>pt_BR</language>
+    <language>pt_PT</language>
+    <language>ro_RO</language>
+    <language>ru_RU</language>
+    <language>sr_RS</language>
+    <language>sv_SE</language>
+    <language>zh_CN</language>
+    <language>zh_TW</language>
+    <language>en_US</language>
+
+    
+    <aspectRatio>16:9</aspectRatio>
+    <aspectRatio>16:10</aspectRatio>
+
+    <fontSize>medium</fontSize>
+    <fontSize>large</fontSize>
+    <fontSize>x-large</fontSize>
+
+    <variant name="jaquettes">
+      <label>Games: covers</label>
+      <label language="fr_FR">Jeux : jaquettes</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="boites">
+      <label>Games: 3D boxes</label>
+      <label language="fr_FR">Jeux : boîtes 3D</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="supports">
+      <label>Games: physical media (discs, cartridges)</label>
+      <label language="fr_FR">Jeux : supports (CD, cartouches)</label>
+      <selectable>true</selectable>
+   </variant>
+   <variant name="logos">
+      <label>Games: logos + cover</label>
+      <label language="fr_FR">Jeux : logos + jaquette</label>
+      <selectable>true</selectable>
+   </variant>
+
+    <colorScheme name="video-normal">
+        <label>Video · normal background</label>
+        <label language="fr_FR">Vidéo · fond normal</label>
+    </colorScheme>
+    <colorScheme name="video-light">
+        <label>Video · light background</label>
+        <label language="fr_FR">Vidéo · fond léger</label>
+    </colorScheme>
+    <colorScheme name="video-dark">
+        <label>Video · dark background</label>
+        <label language="fr_FR">Vidéo · fond sombre</label>
+    </colorScheme>
+    <colorScheme name="screenshot-normal">
+        <label>Screenshot · normal background</label>
+        <label language="fr_FR">Capture · fond normal</label>
+    </colorScheme>
+    <colorScheme name="screenshot-light">
+        <label>Screenshot · light background</label>
+        <label language="fr_FR">Capture · fond léger</label>
+    </colorScheme>
+    <colorScheme name="screenshot-dark">
+        <label>Screenshot · dark background</label>
+        <label language="fr_FR">Capture · fond sombre</label>
+    </colorScheme>
+    <colorScheme name="none-normal">
+        <label>No media · normal background</label>
+        <label language="fr_FR">Sans média · fond normal</label>
+    </colorScheme>
+    <colorScheme name="none-light">
+        <label>No media · light background</label>
+        <label language="fr_FR">Sans média · fond léger</label>
+    </colorScheme>
+    <colorScheme name="none-dark">
+        <label>No media · dark background</label>
+        <label language="fr_FR">Sans média · fond sombre</label>
+    </colorScheme>
+
+    <transitions name="transitions">
+		<label>transitions</label>
+		<selectable>false</selectable>
+		<systemToSystem>instant</systemToSystem>
+		<systemToGamelist>instant</systemToGamelist>
+		<gamelistToGamelist>instant</gamelistToGamelist>
+		<gamelistToSystem>instant</gamelistToSystem>
+		<startupToSystem>fade</startupToSystem>
+		<startupToGamelist>fade</startupToGamelist>
+	</transitions>
+	<suppressTransitionProfiles>
+		<entry>builtin-instant</entry>
+		<entry>builtin-slide</entry>
+		<entry>builtin-fade</entry>
+	</suppressTransitionProfiles>
+    
+</themeCapabilities>

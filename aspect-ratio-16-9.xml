@@ -1,0 +1,106 @@
+<theme>
+	
+    <include>./colors.xml</include>
+    <include>./_inc/system/metadata/_default.xml</include>
+    <include>./_inc/system/metadata/${system.theme}.xml</include>
+    
+    <view name="system, gamelist">
+        <systemstatus name="system-status">
+            <pos>0.800 0.050</pos>
+            <textRelativeScale>0.950</textRelativeScale>
+            <entrySpacing>0.010</entrySpacing>
+        </systemstatus>
+        <clock name="clock">
+            <pos>0.910 0.050</pos>
+            <fontSize>${clockFontSize}</fontSize>
+        </clock>
+        <text name="system-tab,games-tab">
+            <fontSize>${clockFontSize}</fontSize>
+        </text>
+        <text name="system-tab">
+            <pos>0.080 0.050</pos>
+        </text>
+        <text name="games-tab">
+            <pos>0.180 0.050</pos>
+        </text>
+        <text name="system-games-name">
+            <pos>0.240 0.231</pos>
+            <size>0.745 0.0695</size>
+            <fontSize>${carouselTitleFontSize}</fontSize>
+        </text>
+        <image name="gamesystem-logo">
+            <pos>0.208 0.265</pos>
+            <maxSize>0.05 0.05</maxSize>
+        </image>
+        <text name="gamelist-system-name">
+            <pos>0.241 0.282</pos>
+            <size>0.745 0.0695</size>
+            <fontSize>${metadataFontSize}</fontSize>
+        </text>
+        <image name="media-screenshot">
+        	<maxSize>0.280 0.355</maxSize>
+        	<pos>0.822 0.570</pos>
+        </image>
+            <video name="media-video">
+            <pos>0.822 0.570</pos>
+            <cropSize>0.280 0.355</cropSize>
+        </video>
+        <image name="metadata-background">
+            <pos>0.076 0.815</pos>
+            <size>0.285 0.0621</size>
+            <cornerRadius>0.0188</cornerRadius> 
+        </image>
+    </view>
+    
+    <view name="gamelist">
+        <image name="gamelist-metadata-players-icon">
+            <size>0 0.0278</size>
+        </image>
+        <text name="gamelist-metadata-players">
+            <size>0.0380 0.0278</size>
+            <fontSize>${metadataFontSize}</fontSize>
+        </text>
+        <image name="gamelist-metadata-playtime-icon">
+            <size>0 0.0278</size>
+        </image>
+        <text name="gamelist-metadata-playtime">
+            <size>0.0938 0.0278</size>
+            <fontSize>${metadataFontSize}</fontSize>
+        </text>
+        <image name="gamelist-metadata-playcount-icon">
+            <size>0 0.0278</size>
+        </image>
+        <text name="gamelist-metadata-playcount">
+            <size>0.0313 0.0278</size>
+            <fontSize>${metadataFontSize}</fontSize>
+        </text>
+        <image name="gamelist-metadata-left-divider">
+            <size>0.0016 0.0611</size>
+        </image>
+        <image name="gamelist-metadata-middle-divider">
+            <size>0.0016 0.0611</size>
+        </image>
+        <badges name="gamelist-badges">
+            <size>0.340 1</size>
+            <itemMargin>0.008 0</itemMargin>
+        </badges>
+        <text name="gamelist-genre-name">
+            <size>0.350 0.0695</size>
+            <fontSize>${metadataFontSize}</fontSize>
+        </text>
+        <image name="media-miximage">
+        	<maxSize>0.410 0.410</maxSize>
+        </image>
+        <image name="game-marquee">
+        	<maxSize>0.230 0.225</maxSize>
+        </image>
+    </view>
+    
+   
+   
+   
+      	
+   
+   
+   
+</theme>

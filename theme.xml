@@ -1,0 +1,366 @@
+<theme>
+	
+	<include>./colors.xml</include>
+    <include>./_inc/system/metadata/_default.xml</include>
+    <include>./_inc/system/metadata/${system.theme}.xml</include>
+    
+    <variables>
+        <spaceImage>./_inc/images/space.svg</spaceImage>
+    </variables>
+    
+    <variables>
+        <fontLight>./_inc/fonts/Mulish-Light.ttf</fontLight>
+        <fontMedium>./_inc/fonts/Mulish-Medium.ttf</fontMedium>
+        <clockFontSize>0.0345</clockFontSize>
+        <carouselTitleFontSize>0.0360</carouselTitleFontSize>
+        <carouselTitleFontSizeLarge>0.0520</carouselTitleFontSizeLarge>
+        <metadataFontSize>0.0280</metadataFontSize>
+        <metadataFontSizeLarge>0.0410</metadataFontSizeLarge>
+    </variables>
+    
+
+    <!-- Rollando Arcade: text size (accessibility option). Read before the views, so before the elements using it.
+         The "System › Game" header keeps its size: the title position there is measured to the pixel. -->
+    <fontSize name="medium">
+        <variables>
+            <metadataFontSize>0.0280</metadataFontSize>
+            <rlTexteDesc>0.0235</rlTexteDesc>
+            <rlTexteAide>0.0300</rlTexteAide>
+        </variables>
+    </fontSize>
+    <fontSize name="large">
+        <variables>
+            <metadataFontSize>0.0322</metadataFontSize>
+            <rlTexteDesc>0.0270</rlTexteDesc>
+            <rlTexteAide>0.0345</rlTexteAide>
+        </variables>
+    </fontSize>
+    <fontSize name="x-large">
+        <variables>
+            <metadataFontSize>0.0364</metadataFontSize>
+            <rlTexteDesc>0.0306</rlTexteDesc>
+            <rlTexteAide>0.0390</rlTexteAide>
+        </variables>
+    </fontSize>
+
+    <view name="system, gamelist">
+    	<helpsystem name="help-menu-view">
+         <scope>menu</scope>
+         <origin>0.5 1</origin>
+         <pos>0.5 0.9875</pos>
+         <iconColor>cccccc</iconColor>
+         <textColor>cccccc</textColor>
+         <backgroundColor>181818</backgroundColor>
+         <backgroundHorizontalPadding>0.01 0.01</backgroundHorizontalPadding>
+         <backgroundVerticalPadding>0.015 0.02</backgroundVerticalPadding>
+         <backgroundCornerRadius>0.005</backgroundCornerRadius>
+         <entryRelativeScale>0.9</entryRelativeScale>
+      </helpsystem>
+    	<helpsystem name="help-left,help-right">
+         <fontPath>${fontLight}</fontPath>
+         <letterCase>capitalize</letterCase>
+         <iconColor>${white}</iconColor>
+         <textColor>${white}</textColor>
+         <entryRelativeScale>1</entryRelativeScale>
+         <entrySpacing>0.0130208</entrySpacing>
+         <iconTextSpacing>0.0065104</iconTextSpacing>
+         <fontSize>${rlTexteAide}</fontSize>
+         <scope>view</scope>
+      </helpsystem>
+      <helpsystem name="help-left">
+         <origin>0 1</origin>
+         <pos>0.0170208 0.9768519</pos>
+      </helpsystem>
+      <helpsystem name="help-right">
+         <origin>1 1</origin>
+         <pos>0.9779792 0.9768519</pos>
+      </helpsystem>
+        <systemstatus name="system-status">
+        	<origin>1 0.5</origin>
+            <fontPath>${fontLight}</fontPath>
+        </systemstatus>
+        <clock name="clock">
+            <origin>0.5 0.5</origin>
+            <fontPath>${fontLight}</fontPath>
+            <horizontalAlignment>right</horizontalAlignment>
+            <color>${white}</color>
+        </clock>
+        <text name="system-tab,games-tab">
+            <origin>0.5 0.5</origin>
+            <zIndex>40</zIndex>
+        </text>
+        <text name="system-tab">
+            <text>Systems</text>
+        </text>
+        <text name="games-tab">
+            <text>Games</text>
+        </text>
+        <text name="system-games-name">
+            <origin>0 0</origin>
+            <container>true</container>
+            <containerType>horizontal</containerType>
+            <fontPath>${fontLight}</fontPath>
+            <opacity>0.9</opacity>
+            <color>${white}</color>
+            <zIndex>40</zIndex>
+        </text>
+        <image name="gamesystem-logo">
+            <origin>0 0.5</origin>
+            <path>./_inc/system/logos/${system.theme}.png</path>
+            <metadataElement>true</metadataElement>
+            <zIndex>40</zIndex>
+        </image>
+        <image name="metadata-background,metadata-lastplayed-background">
+            <origin>0 0.5</origin>
+            <path>${spaceImage}</path>
+            <tile>true</tile>
+            <cornerRadius>0.0188</cornerRadius> 
+            <color>${grey}</color>
+            <opacity>0.5</opacity>
+            <zIndex>40</zIndex>
+        </image>
+        <image name="system-metadata-divider,system-lastplayed-divider,gamelist-metadata-left-divider,gamelist-metadata-middle-divider">
+        	<origin>0 0.5</origin>
+            <path>${spaceImage}</path>
+            <tile>true</tile>
+            <color>${divider}</color>
+            <zIndex>52</zIndex>
+        </image>
+        <video name="media-video">
+            <origin>0.5 0.5</origin>
+            <iterationCount>0</iterationCount>
+            <interpolation>nearest</interpolation>
+            <imageCornerRadius>0.010</imageCornerRadius>
+            <videoCornerRadius>0.010</videoCornerRadius>
+            <fadeInType>black</fadeInType>
+			<pillarboxes>false</pillarboxes>
+            <fadeInTime>0.5</fadeInTime>
+            <imageType>none</imageType>
+            <visible>${showMediaVideoSystem}</visible>
+            <delay>1</delay>
+        </video>
+        <image name="media-screenshot">
+        	<origin>0.5 0.5</origin>
+        	<imageType>screenshot</imageType>
+        	<cornerRadius>0.010</cornerRadius>
+        	<visible>${showMediaScreenshot}</visible>
+        	<zIndex>40</zIndex>
+        	</image>
+    </view>
+    
+    <view name="gamelist">
+    	<helpsystem name="help-left">
+         <entries>b,back</entries>
+      </helpsystem>
+      <helpsystem name="help-right">
+         <entries>a,x,thumbstickclick</entries>
+      </helpsystem>
+        <text name="system-games-name">
+            <systemNameSuffix>false</systemNameSuffix>
+            <metadata>name</metadata>
+        </text>
+        <text name="gamelist-genre-name">
+        	<origin>0.5 0</origin>
+            <metadata>genre</metadata>
+            <defaultValue>:space:</defaultValue>
+            <container>true</container>
+            <verticalAlignment>center</verticalAlignment>
+            <horizontalAlignment>center</horizontalAlignment>
+            <fontPath>${fontLight}</fontPath>
+            <opacity>0.9</opacity>
+            <color>${white}</color>
+            <zIndex>40</zIndex>
+        </text>
+        <text name="gamelist-system-name">
+        	<origin>0 0</origin>
+            <metadata>sourceSystemFullname</metadata>
+            <container>true</container>
+            <horizontalAlignment>left</horizontalAlignment>
+            <fontPath>${fontLight}</fontPath>
+            <color>${greyUnfocused}</color>
+            <zIndex>40</zIndex>
+        </text>
+        <video name="gamelist-background-video">
+            <pos>0 0</pos>
+            <cropSize>1 1</cropSize>
+            <origin>0 0</origin>
+            <imageType>fanart,screenshot</imageType>
+            <iterationCount>0</iterationCount>
+            <audio>true</audio>
+            <interpolation>nearest</interpolation>
+            <delay>1.3</delay>
+            <fadeInType>transparent</fadeInType>
+            <fadeInTime>0.5</fadeInTime>
+            <scrollFadeIn>true</scrollFadeIn>
+            <visible>${showBackgroundVideo}</visible>
+            <zIndex>30</zIndex>
+        </video>
+        <image name="gamelist-background-art">
+            <origin>0 0</origin>
+            <pos>0 0</pos>
+            <cropSize>1 1</cropSize>
+            <imageType>fanart,screenshot</imageType>
+            <default>./_inc/fonds/${system.theme}.webp</default>
+            <scrollFadeIn>true</scrollFadeIn>
+            <visible>${showBackgroundArt}</visible>
+            <zIndex>30</zIndex>
+        </image>
+        <image name="background-gradient">
+        	<origin>0 0</origin>
+        	<pos>0 0</pos>
+            <cropSize>1 1</cropSize>
+            <opacity>0.78</opacity>
+            <path>./_inc/images/background-gradient.png</path>
+            <zIndex>31</zIndex>
+      </image>
+        <text name="system-tab">
+            <color>${greyUnfocused}</color>
+            <fontPath>${fontLight}</fontPath>
+        </text>
+        <text name="games-tab">
+            <color>${white}</color>
+            <fontPath>${fontMedium}</fontPath>
+        </text>
+        <image name="gamelist-metadata-players-icon">
+            <origin>0 0.5</origin>
+            <path>./_inc/images/icon-players.svg</path>
+            <color>${white}</color>
+            <zIndex>45</zIndex>
+        </image>
+        <text name="gamelist-metadata-players">
+            <origin>0 0.5</origin>
+            <metadata>players</metadata>
+            <defaultValue>:space:</defaultValue>
+            <container>true</container>
+            <containerType>horizontal</containerType>
+			<horizontalAlignment>center</horizontalAlignment>
+            <containerScrollSpeed>0.7</containerScrollSpeed>
+            <containerStartDelay>2</containerStartDelay>
+            <fontPath>${fontMedium}</fontPath>
+            <color>${white}</color>
+            <zIndex>45</zIndex>
+        </text>
+        <image name="gamelist-metadata-playcount-icon">
+            <origin>0 0.5</origin>
+            <path>./_inc/images/icon-playcount.svg</path>
+            <color>${white}</color>
+            <zIndex>45</zIndex>
+        </image>
+        <text name="gamelist-metadata-playcount">
+            <origin>0 0.5</origin>
+            <metadata>playcount</metadata>
+            <defaultValue>0</defaultValue>
+            <container>true</container>
+            <containerType>horizontal</containerType>
+            <containerScrollSpeed>0.7</containerScrollSpeed>
+            <containerStartDelay>2</containerStartDelay>
+            <fontPath>${fontMedium}</fontPath>
+            <color>${white}</color>
+            <zIndex>45</zIndex>
+        </text>
+        <image name="gamelist-metadata-playtime-icon">
+            <origin>0 0.5</origin>
+            <path>./_inc/images/icon-playtime.svg</path>
+            <color>${white}</color>
+            <zIndex>45</zIndex>
+        </image>
+        <text name="gamelist-metadata-playtime">
+            <origin>0 0.5</origin>
+            <metadata>playtime</metadata>
+            <defaultValue>0 minute</defaultValue>
+            <container>true</container>
+            <containerType>horizontal</containerType>
+            <containerScrollSpeed>0.7</containerScrollSpeed>
+            <containerStartDelay>2</containerStartDelay>
+            <fontPath>${fontMedium}</fontPath>
+            <color>${white}</color>
+            <zIndex>45</zIndex>
+        </text>
+        <badges name="gamelist-badges">
+            <origin>0 0</origin>
+            <horizontalAlignment>left</horizontalAlignment>
+            <direction>row</direction>
+            <lines>8</lines>
+            <itemsPerLine>8</itemsPerLine>
+            <slots>favorite,completed,altemulator,collection,manual,folder,kidgame,broken</slots>
+            <customBadgeIcon badge="favorite">./_inc/images/badge-favorite.svg</customBadgeIcon>
+            <customBadgeIcon badge="completed">./_inc/images/badge-completed.svg</customBadgeIcon>
+            <customBadgeIcon badge="altemulator">./_inc/images/badge-altemulator.svg</customBadgeIcon>
+            <customBadgeIcon badge="collection">./_inc/images/badge-collection.svg</customBadgeIcon>
+            <customBadgeIcon badge="manual">./_inc/images/badge-manual.svg</customBadgeIcon>
+            <customBadgeIcon badge="folder">./_inc/images/badge-folder.svg</customBadgeIcon>
+            <customBadgeIcon badge="kidgame">./_inc/images/badge-kidgame.svg</customBadgeIcon>
+            <customBadgeIcon badge="broken">./_inc/images/badge-broken.svg</customBadgeIcon>
+            <zIndex>45</zIndex>
+        </badges>
+        <image name="game-marquee">
+        	<origin>0.5 0.5</origin>
+        	<imageType>marquee</imageType>
+        	<zIndex>40</zIndex>
+        	</image>
+        <image name="media-miximage">
+        	<origin>0.5 0.5</origin>
+        	<imageType>miximage</imageType>
+        	<visible>${showMediaMixImage}</visible>
+        	<zIndex>40</zIndex>
+        	</image>
+    </view>
+    
+        
+   
+   
+
+   
+   
+   
+	<aspectRatio name="16:9">
+      <include>./aspect-ratio-16-9.xml</include>
+      <include>./_inc/rollando/logos.xml</include>
+      <include>./_inc/rollando/boites.xml</include>
+      <include>./_inc/rollando/jaquettes.xml</include>
+      <include>./_inc/rollando/supports.xml</include>
+      <include>./_inc/rollando/accueil.xml</include>
+      <include>./_inc/rollando/commun.xml</include>
+   </aspectRatio>
+
+   <!-- 16:10 (Steam Deck…): same proportional layout, "System › Game" title position recomputed -->
+   <aspectRatio name="16:10">
+      <variables>
+         <rlSepX>${rlSepX1610}</rlSepX>
+         <rlTitreX>${rlTitreX1610}</rlTitreX>
+      </variables>
+      <include>./aspect-ratio-16-10.xml</include>
+      <include>./_inc/rollando/logos.xml</include>
+      <include>./_inc/rollando/boites.xml</include>
+      <include>./_inc/rollando/jaquettes.xml</include>
+      <include>./_inc/rollando/supports.xml</include>
+      <include>./_inc/rollando/accueil.xml</include>
+      <include>./_inc/rollando/commun.xml</include>
+   </aspectRatio>
+
+
+	
+    <view name="all">
+      <sound name="systembrowse">
+         <path>./_inc/sounds/systembrowse.wav</path>
+      </sound>
+      <sound name="quicksysselect">
+         <path>./_inc/sounds/quicksysselect.wav</path>
+      </sound>
+      <sound name="select">
+         <path>./_inc/sounds/select.wav</path>
+      </sound>
+      <sound name="back">
+         <path>./_inc/sounds/back.wav</path>
+      </sound>
+      <sound name="scroll">
+         <path>./_inc/sounds/scroll.wav</path>
+      </sound>
+      <sound name="favorite">
+         <path>./_inc/sounds/favorite.wav</path>
+      </sound>
+      <sound name="launch">
+         <path>./_inc/sounds/launch.wav</path>
+      </sound>
+   </view>
+</theme>

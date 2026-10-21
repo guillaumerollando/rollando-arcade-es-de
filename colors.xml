@@ -1,0 +1,54 @@
+<!--
+Rollando Arcade colour schemes = media shown right of the game list (video / screenshot / none)
+x background darkening of the game lists (light / normal / dark). The first one is the default.
+-->
+<theme>
+    <colorScheme name="video-normal,video-light,video-dark,screenshot-normal,screenshot-light,screenshot-dark,none-normal,none-light,none-dark">
+        <variables>
+            <white>FFFFFF</white>
+            <black>000000</black>
+            <grey>7C7C7C</grey>
+            <greyUnfocused>A3A3A3</greyUnfocused>
+            <divider>83838388</divider>
+            <online>3BE795</online>
+            <showMediaVideoSystem>false</showMediaVideoSystem>
+            <showMediaMixImage>false</showMediaMixImage>
+            <showBackgroundVideo>false</showBackgroundVideo>
+            <showBackgroundArt>true</showBackgroundArt>
+            <MediaVideoAudioOnly>40</MediaVideoAudioOnly>
+        </variables>
+    </colorScheme>
+    <colorScheme name="video-normal,video-light,video-dark">
+        <variables>
+            <showMediaVideoGamelist>true</showMediaVideoGamelist>
+            <showMediaScreenshot>false</showMediaScreenshot>
+        </variables>
+    </colorScheme>
+    <colorScheme name="screenshot-normal,screenshot-light,screenshot-dark">
+        <variables>
+            <showMediaVideoGamelist>false</showMediaVideoGamelist>
+            <showMediaScreenshot>true</showMediaScreenshot>
+        </variables>
+    </colorScheme>
+    <colorScheme name="none-normal,none-light,none-dark">
+        <variables>
+            <showMediaVideoGamelist>false</showMediaVideoGamelist>
+            <showMediaScreenshot>false</showMediaScreenshot>
+        </variables>
+    </colorScheme>
+    <colorScheme name="video-normal,screenshot-normal,none-normal">
+        <variables>
+            <rlFondOpacite>0.50</rlFondOpacite>
+        </variables>
+    </colorScheme>
+    <colorScheme name="video-light,screenshot-light,none-light">
+        <variables>
+            <rlFondOpacite>0.30</rlFondOpacite>
+        </variables>
+    </colorScheme>
+    <colorScheme name="video-dark,screenshot-dark,none-dark">
+        <variables>
+            <rlFondOpacite>0.72</rlFondOpacite>
+        </variables>
+    </colorScheme>
+</theme>
